@@ -17,7 +17,7 @@ app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname,'./client/build/index.html'))
 })
 
-
-app.listen(5000,()=>{
-    console.log("listening on the port: 5000");
+const port = process.env.port || 8080
+app.listen(port,()=>{
+    console.log("listening on the port: 8080");
 })
